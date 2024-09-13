@@ -23,7 +23,7 @@ Change the contents of this page depending on the current day and time.
 const display = document.querySelector('[data-js="display"]');
 
 
-const time = new Date().getHours()
+const time = new Date().getHours();
 
 function getGreeting(time) {
   if (time >= 6 && time <=12) {
@@ -37,10 +37,17 @@ function getGreeting(time) {
   }
 };
 
+const date = new Date().getDay();
 
 function getDayColor() {
-  // Code here
-}
+  if (date === 1) {
+    return "darkgrey";
+} else if (date >= 2 && date <=5)
+  return "lightblue";
+  else {
+    return "hotpink";
+  }
+};
 
 display.textContent = getGreeting(time);
 document.body.style.backgroundColor = getDayColor(date);
