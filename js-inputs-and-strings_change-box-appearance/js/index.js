@@ -18,24 +18,24 @@ For further information check MDN:
 */
 
 const box = document.querySelector('[data-js="box"]');
-const colorChange = document.querySelector('[data-js="input-color"]');
-const radiusChange = document.querySelector('[data-js="input-radius"]');
-const rotationChange = document.querySelector('[data-js="input-rotation"]');
+const colorInput = document.querySelector('[data-js="input-color"]');
+const radiusInput = document.querySelector('[data-js="input-radius"]');
+const rotationInput = document.querySelector('[data-js="input-rotation"]');
 
 
 
-colorChange.addEventListener ("input", () => {
-    const hue = colorChange.value;
+colorInput.addEventListener ("input", () => {
+    const hue = colorInput.value;
     box.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
 });
 
-radiusChange.addEventListener ("input", () => {
-    const radius = radiusChange.value;
+radiusInput.addEventListener ("input", () => {
+    const radius = radiusInput.value;
     box.style.borderRadius = `${radius}%`;
 });
 
-rotationChange.addEventListener ("input", () => {
-    const rotation = rotationChange.value;
+rotationInput.addEventListener ("input", () => {
+    const rotation = rotationInput.value;
     box.style.transform = `rotate(${rotation}deg)`;
 });
 
