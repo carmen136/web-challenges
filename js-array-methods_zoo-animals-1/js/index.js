@@ -5,13 +5,13 @@ import { zooAnimals } from "../utils/db.js";
 // The function should return 'true' if the animal name is included in the array or 'false' if not.
 
 function hasAnimal(animals, animalName) {
-  const findAnimal = animals.find((animalName) => {
-    return animals.name === textContent
-  }
-  return "";
+  const lowerCaseAnimalName = animalName.toLowerCase();
+  animals.includes(lowerCaseAnimalName);
+  return animals.map((animal) => {
+    animal.toLowerCase().includes(lowerCaseAnimalName);
+  });
+  
 }
-
-
 
 // Bonus:
 // Can you modify the function so that it works case-insensitive?
@@ -43,11 +43,3 @@ zooAnimals.forEach((animal) => {
   tag.textContent = animal;
   animalList.append(tag);
 });
-
-
-
-// Our zoo has a lot of animals. These animals are shown on the website. To improve the user experience we want to implement a search field where the user can check whether a specific animal is included or not. The form is already implemented, but it's not working correctly yet. Take a look at the browser preview.
-
-// ## Task
-
-// Look inside the `index.js`. There is a function called `hasAnimal`. Your task is to implement this function correctly.
