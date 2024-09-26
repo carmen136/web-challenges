@@ -1,4 +1,5 @@
-export default function Bookmark(props) {
+
+export function Bookmark(props) {
     const bookmark = document.createElement("button");
     bookmark.classList.add("bookmark");
   

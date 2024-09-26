@@ -1,3 +1,5 @@
+
+// Store the cards in a global state
 export const cards = [
     {
       question:

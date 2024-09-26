@@ -1,7 +1,8 @@
-import { cards } from "../../data.js"
+import { cards } from "../../global.js";
+import { Card } from "../Card/Card.js";
 
 
-export default function CardList() {
+export function CardList() {
     const cardList = document.createElement("section");
     cardList.classList.add("card-list");
   
@@ -12,3 +13,4 @@ export default function CardList() {
   
     return cardList;
   }
+  
