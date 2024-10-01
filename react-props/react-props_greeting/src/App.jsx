@@ -9,29 +9,7 @@ export default function App() {
 }
 
 
-// Lösung 1:
-
-// function Greeting({name, isCoach}) {
-//   return (
-//     <div>
-//       Hello, {isCoach ? " Coach" : ""} {name}!
-//     </div>
-//   )
-// }
-
-
-// Lösung 2:
-
-// function Greeting({ name, isCoach }) {
-//   return (
-//     <div>
-//       {isCoach ? "Hello, Coach!" : `Hello, ${name}!`}
-//     </div>
-//   );
-// }
-
-
-// Lösung 3:
+// Lösung a:
 
 function Greeting({ name, isCoach }) {
   const greetingPrefix = isCoach ? "Coach" : name; // Bestimme den Namen oder "Coach"
@@ -42,6 +20,27 @@ function Greeting({ name, isCoach }) {
     </div>
   );
 }
+
+// Lösung b:
+
+// function Greeting({name, isCoach}) {
+//   return (
+//     <div>
+//       Hello, {isCoach ? " Coach" : ""} {name}!
+//     </div>
+//   )
+// }
+
+
+// Lösung c:
+
+// function Greeting({ name, isCoach }) {
+//   return (
+//     <div>
+//       {isCoach ? "Hello, Coach!" : `Hello, ${name}!`}
+//     </div>
+//   );
+// }
 
 
 

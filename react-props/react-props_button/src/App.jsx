@@ -3,29 +3,33 @@ import "./styles.css";
 
 // Lösung mit einem statischen console.log:
 
-// export default function App() {
-//   function handleButton() {
-//     console.log("Clicked successfully!");
-//   }
-//   return <div>
-//             <Button 
-//             backgroundColor = "green"
-//             isDisabled = {false}
-//             text = "Submit"
-//             onButton = {handleButton} />
-//             <Button 
-//             backgroundColor = "red"
-//             isDisabled = {false}
-//             text = "Danger!"
-//             onButton = {handleButton} />
-//             <Button 
-//             backgroundColor = "yellow"
-//             isDisabled = {true}
-//             text = "Please fill in the form correctly."
-//             onButton = {handleButton} />
-//          </div>
-// }
+/*
+export default function App() {
+  function handleButton() {
+    console.log("Clicked successfully!");
+  }
+  return <div>
+            <Button 
+            backgroundColor = "green"
+            isDisabled = {false}
+            text = "Submit"
+            onButton = {handleButton} />
+            <Button 
+            backgroundColor = "red"
+            isDisabled = {false}
+            text = "Danger!"
+            onButton = {handleButton} />
+            <Button 
+            backgroundColor = "yellow"
+            isDisabled = {true}
+            text = "Please fill in the form correctly."
+            onButton = {handleButton} />
+         </div>
+}
+*/
 
+
+// Lösung mit einem variablen console.log Inhalt:
 
 export default function App() {
   function handleButton(buttonText) {
@@ -36,7 +40,7 @@ export default function App() {
             backgroundColor = "green"
             isDisabled = {false}
             text = "Submit"
-            //hier muss man eine Arrow-Function aufrufen, da sonst der Text sofort beim Laden der Seite erscheint und nicht erst beim Klick auf den BUtton
+            //hier muss man eine Arrow-Function aufrufen, da sonst der Text sofort beim Laden der Seite erscheint und nicht erst beim Klick auf den Button
             onButton = {() => handleButton("Submit button clicked")} />  
             <Button 
             backgroundColor = "red"
