@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useState } from "react";
+import { useState } from "react";  // import {useState}
 
 export default function App() {
   const [isActiveColor, setisActiveColor] = useState(false);
