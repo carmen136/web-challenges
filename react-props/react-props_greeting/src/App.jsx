@@ -43,6 +43,27 @@ function Greeting({ name, isCoach }) {
 // }
 
 
+// Lösung d:
+
+
+// export default function App() {
+//   return <Greeting
+//             name = "Ruth"
+//             />;
+    
+// }
+
+// const coachName = "Esraa";
+
+// function Greeting({ name, isCoach }) {
+//   return (
+//     <div>
+//       Hello, {name === coachName ? "Coach" : `${name}`}!`
+//     </div>
+//   );
+// }
+
+
 
 
 // ### Create a Component with props
