@@ -19,6 +19,8 @@ export default function App({ Component, pageProps }) {
   const [lights, setLights] = useState(initialLights);
   const lightsCount = lights.filter((light) => light.isOn === true)
   const lightSum = lightsCount.length.reduce((a, b) => a +b);
+  // das könnte man auch in die Homepage schreiben und verkürzen!
+  const isDimmed = lights.every(light => !light.isOn);
 
   function handleToggle(lightId) {
     setLights(lights.map((light) => light.id === lightId ? {...light, isOn: !light.isOn} : light));
@@ -34,10 +36,9 @@ export default function App({ Component, pageProps }) {
   }
 
 
-
-
+  
   return (
-    <Layout>
+    <Layout isDimmed={isDimmed}>
       <GlobalStyle />
       <Component {...pageProps} lights={lights} onToggle={handleToggle} lightSum={lightSum} onAllLightsOn={handleAllLightsOn} onAllLightsOff={handleAllLightsOff}/>
     </Layout>
